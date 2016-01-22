@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(params[:contact])
+    @contact = Contact.new(contact_params)
 
     if @contact.save
       # 成功
@@ -15,6 +15,12 @@ class ContactsController < ApplicationController
       flash[:notice] = "失敗!!"
       # 失敗
     end
+  end
+
+  # Strong Parameter
+  private
+  def contact_params
+    params.require(:contact).permit(:subject, :email, :content)
   end
 
 end
