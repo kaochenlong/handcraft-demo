@@ -10,10 +10,11 @@ class ContactsController < ApplicationController
     if @contact.save
       # 成功
       flash[:notice] = "已成功送出!"
-      redirect_to root_path
+      redirect_to contacts_path
     else
-      flash[:notice] = "失敗!!"
       # 失敗
+      flash[:notice] = "失敗!!"
+      render action: :index
     end
   end
 
