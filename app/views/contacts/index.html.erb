@@ -1,6 +1,18 @@
 <h1>聯絡我們</h1>
 
 <%= form_for(@contact) do |f| %>
+  <%= f.label :subject %>
+  <%= f.text_field :subject %>
+  <br />
 
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <br />
+
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+
+  <br />
+  <%= f.submit %>
 <% end %>
 
