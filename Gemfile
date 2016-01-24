@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'faker'
 gem 'simple_form'
 gem 'delayed_job_active_record'
 gem 'settingslogic'

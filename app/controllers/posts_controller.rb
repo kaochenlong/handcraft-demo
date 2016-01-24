@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     post = Post.new(post_params)
     post.save
     flash[:notice] = "已成功送出!"
-    redirect_to posts_path
+    redirect_to root_path
   end
 
   def edit

@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class ContactsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "contact page" do
+    get :index
+    assert_response :success
+    assert_select "title", "HandcraftDemo - Contact Us"
+  end
+
 end
