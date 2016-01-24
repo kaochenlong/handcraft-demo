@@ -1,2 +1,14 @@
+<% @posts = Post.all %>
 <h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+
+<%= link_to '新增', new_post_path %>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+    <%= post.title %>
+    <%= link_to '編輯', edit_post_path(post) %>
+    <%= link_to '刪除', post_path(post), method: "delete" %>
+    </li>
+  <% end %>
+</ul>

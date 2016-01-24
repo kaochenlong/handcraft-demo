@@ -8,19 +8,10 @@
   </ul>
 <% end %>
 
-<%= form_for(@contact) do |f| %>
-  <%= f.label :subject %>
-  <%= f.text_field :subject %>
-  <br />
-
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <br />
-
-  <%= f.label :content %>
-  <%= f.text_area :content %>
-
-  <br />
+<%= simple_form_for(@contact) do |f| %>
+  <%= f.input :subject %>
+  <%= f.input :email %>
+  <%= f.input :content %>
   <%= f.submit %>
 <% end %>
 
