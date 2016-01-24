@@ -2,5 +2,8 @@
 
 <%= link_to '新增', new_post_path %>
 
-<%= render "post_list" %>
+<%= render "post_list", posts: @posts %>
 
+<ul>
+  <%= render @posts %>
+</ul>
