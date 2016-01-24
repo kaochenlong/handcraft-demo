@@ -41,11 +41,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.mandrillapp.com',
+    address:              Settings.SMTP.host,
     port:                 587,
     domain:               '5xruby.tw',
-    user_name:            'eddie@5xruby.tw',
-    password:             'uIQ6kOQtRCY6xmEbMZvdJg',
+    user_name:            Settings.SMTP.user_name,
+    password:             Settings.SMTP.password,
     authentication:       'plain',
     enable_starttls_auto: true
   }

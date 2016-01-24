@@ -1,0 +1,16 @@
+defaults: &defaults
+  Facebook:
+    AppID: YOUR_ID
+  SMTP:
+    host: ''
+    user_name: ''
+    password: ''
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

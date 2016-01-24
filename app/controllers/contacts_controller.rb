@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
       flash[:notice] = "已成功送出!"
 
       # send mail
-      ContactMailer.send_notification(@contact).deliver_later
+      ContactMailer.send_notification(@contact).deliver_now
 
       redirect_to contacts_path
     else
