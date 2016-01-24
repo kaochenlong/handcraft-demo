@@ -1,0 +1,12 @@
+<h1>BMI 計算器</h1>
+
+<%= form_tag('/bmi', method:"post") do %>
+  身高：<%= text_field_tag :height %><br />
+  體重：<%= text_field_tag :weight %><br />
+  <%= submit_tag "計算" %>
+<% end %>
+
+<% if @bmi %>
+<hr />
+BMI = <%= @bmi.round(2) %>
+<% end %>
