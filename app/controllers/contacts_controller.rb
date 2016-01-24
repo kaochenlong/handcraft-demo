@@ -10,6 +10,10 @@ class ContactsController < ApplicationController
     if @contact.save
       # 成功
       flash[:notice] = "已成功送出!"
+
+      # send mail
+      ContactMailer.send_notification(@contact).deliver_later
+
       redirect_to contacts_path
     else
       # 失敗
