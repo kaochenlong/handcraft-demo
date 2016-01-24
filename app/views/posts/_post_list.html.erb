@@ -1,0 +1,10 @@
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+    <%= post.title %>
+    <%= link_to '檢視', post %>
+    <%= link_to '編輯', edit_post_path(post) %>
+    <%= link_to '刪除', post_path(post), method: "delete" %>
+    </li>
+  <% end %>
+</ul>
