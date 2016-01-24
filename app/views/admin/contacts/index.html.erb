@@ -1,0 +1,12 @@
+<h1>聯絡清單</h1>
+
+<ul>
+<% @contacts.each do |contact| %>
+  <li>
+  <%= link_to contact.subject, admin_contact_path(contact) %>
+  <%= link_to '編輯', edit_admin_contact_path(contact) %>
+  <%= link_to '刪除', admin_contact_path(contact), method: 'delete'%>
+  </li>
+<% end %>
+</ul>
+
