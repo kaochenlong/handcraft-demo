@@ -7,3 +7,9 @@
 <ul>
   <%= render @posts %>
 </ul>
+
+<% content_for :title_block do %>
+12345
+<% end %>
+<% provide :bottom_js, "hello, ruby" %>
+
